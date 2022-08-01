@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sign In</title>
+
+    <!-- Font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!-- CSS main file -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="img-box">
+        <img src="images/laptop.jpg" alt="" />
+      </div>
+
+      <div class="form-box">
+        <i class="fa-solid fa-circle-user user"></i>
+        <form action="">
+          <label for="mail">E-mail Address</label>
+          <input type="email" id="mail" required class="mail" />
+          <i class="fa-solid fa-envelope envelope"></i>
+
+          <label for="pass">Password</label>
+          <input type="password" id="pass" required class="password" />
+          <i class="fa-solid fa-lock lock"></i>
+
+          <input type="checkbox" id="check" class="show" />
+          <label for="check">Show Password</label>
+
+          <input type="submit" value="Sign In" />
+        </form>
+
+        <span>
+          If You Don't Have An Account
+          <a href="#">Sign Up</a>
+        </span>
+      </div>
+    </div>
+
+    <script>
+      let showPassword = document.getElementById("check");
+      let password = document.getElementById("pass");
+
+      showPassword.onclick = function () {
+        if (showPassword.checked) {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      };
+    </script>
+  </body>
+</html>

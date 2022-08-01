@@ -1,0 +1,207 @@
+:root {
+  --main-background-color: linear-gradient(250deg, #bb8585, #060404);
+  --main-color: #bb8585;
+  --main-font-size: 20px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  background: var(--main-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 65%;
+  height: 80%;
+  display: flex;
+}
+
+.content .img-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.content .img-box::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(0 0 0 / 0.6);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.content .img-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.content .form-box {
+  background-color: rgb(255 255 255 / 0.8);
+  width: 50%;
+  height: 100%;
+}
+
+.content .form-box .user {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 30px 0;
+  font-size: 80px;
+  color: var(--main-color);
+}
+
+.content .form-box form {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.content .form-box form label {
+  font-size: var(--main-font-size);
+  color: #1f1d1d;
+  line-height: 1.6;
+}
+
+.content .form-box form #mail,
+.content .form-box form #pass {
+  width: 100%;
+  margin: 0 0 10px;
+  padding: 10px 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 6px;
+  font-size: var(--main-font-size);
+  caret-color: var(--main-color);
+  background: transparent;
+  font-weight: bold;
+}
+
+.content .form-box form .envelope,
+.content .form-box form .lock {
+  position: absolute;
+  right: 10px;
+  color: var(--main-color);
+  font-size: var(--main-font-size);
+}
+
+.content .form-box form .envelope {
+  top: 46px;
+}
+
+.content .form-box form .lock {
+  top: 136px;
+}
+
+.content .form-box form .show {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.content .form-box form input[type="submit"] {
+  display: block;
+  background: var(--main-background-color);
+  color: white;
+  font-size: var(--main-font-size);
+  text-transform: uppercase;
+  padding: 15px 30px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.content .form-box form input:focus {
+  outline: none;
+}
+
+.content .form-box span {
+  font-size: 17px;
+  margin: 0 20px 0;
+  display: block;
+}
+
+.content .form-box span a {
+  color: var(--main-color);
+}
+
+@media (max-width: 991px) {
+  .content {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    position: fixed;
+  }
+
+  .content .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content .form-box {
+    width: 65%;
+    height: 80%;
+    z-index: 1;
+    border-radius: 6px;
+  }
+
+  .content .form-box span {
+    margin: 0 50px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .content .form-box {
+    height: 60%;
+  }
+
+  .content .form-box .user {
+    font-size: 48px;
+  }
+
+  .content .form-box form label,
+  .content .form-box form .envelope,
+  .content .form-box form .lock,
+  .content .form-box form input[type="submit"] {
+    font-size: 14px;
+  }
+
+  .content .form-box form #mail,
+  .content .form-box form #pass {
+    padding: 5px 10px;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .content .form-box form input[type="submit"] {
+    padding: 10px 25px;
+  }
+
+  .content .form-box span {
+    margin: 0 15px 0;
+    font-size: 12px;
+  }
+
+  .content .form-box form .envelope {
+    top: 32px;
+  }
+  .content .form-box form .lock {
+    top: 94px;
+  }
+}
