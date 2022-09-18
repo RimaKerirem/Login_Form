@@ -2,8 +2,7 @@
 
 ### Built with
 
-  #### Languges : HTML and CSS
+	#### Languges : HTML and CSS
+	#### Frameworks : Font Awesome 6
 
-  #### Frameworks : Font Awesome 6
-
-### Visit Site : https://rimakerirem.github.io/Login_Form/
+### Demo : https://rimakerirem.github.io/Login_Form/
